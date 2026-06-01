@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>1024 Game</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="game-container">
+    <header class="header">
+      <h1>1024</h1>
+      <div class="score-panel">
+        <div>Score: <span id="score">0</span></div>
+        <div>Best: <span id="best">0</span></div>
+        <button id="newGame">New Game</button>
+      </div>
+    </header>
+
+    <div id="board" class="board" aria-label="1024 游戏棋盘"></div>
+
+    <p class="controls">使用方向键或触摸滑动来移动方块。合并到 1024 获胜。</p>
+    <div id="message" class="message hidden"></div>
+  </div>
+  <script src="app.js"></script>
+</body>
+</html>
