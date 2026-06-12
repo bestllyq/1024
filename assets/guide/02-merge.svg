@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500">
+  <rect width="400" height="500" rx="16" fill="#faf8ef"/>
+  <text x="200" y="30" text-anchor="middle" font-family="sans-serif" font-size="20" font-weight="bold" fill="#776e65">Merge Matching Tiles</text>
+  <!-- Grid background -->
+  <rect x="50" y="55" width="300" height="300" rx="8" fill="#bbada0"/>
+  <!-- Cells -->
+  <rect x="58" y="63" width="66" height="66" rx="4" fill="rgba(238,228,218,0.35)"/>
+  <rect x="132" y="63" width="66" height="66" rx="4" fill="rgba(238,228,218,0.35)"/>
+  <rect x="206" y="63" width="66" height="66" rx="4" fill="rgba(238,228,218,0.35)"/>
+  <rect x="280" y="63" width="66" height="66" rx="4" fill="rgba(238,228,218,0.35)"/>
+  <rect x="58" y="137" width="66" height="66" rx="4" fill="rgba(238,228,218,0.35)"/>
+  <rect x="132" y="137" width="66" height="66" rx="4" fill="rgba(238,228,218,0.35)"/>
+  <rect x="206" y="137" width="66" height="66" rx="4" fill="rgba(238,228,218,0.35)"/>
+  <rect x="280" y="137" width="66" height="66" rx="4" fill="rgba(238,228,218,0.35)"/>
+  <rect x="58" y="211" width="66" height="66" rx="4" fill="rgba(238,228,218,0.35)"/>
+  <rect x="132" y="211" width="66" height="66" rx="4" fill="rgba(238,228,218,0.35)"/>
+  <rect x="206" y="211" width="66" height="66" rx="4" fill="rgba(238,228,218,0.35)"/>
+  <rect x="280" y="211" width="66" height="66" rx="4" fill="rgba(238,228,218,0.35)"/>
+  <rect x="58" y="285" width="66" height="66" rx="4" fill="rgba(238,228,218,0.35)"/>
+  <rect x="132" y="285" width="66" height="66" rx="4" fill="rgba(238,228,218,0.35)"/>
+  <rect x="206" y="285" width="66" height="66" rx="4" fill="rgba(238,228,218,0.35)"/>
+  <rect x="280" y="285" width="66" height="66" rx="4" fill="rgba(238,228,218,0.35)"/>
+  <!-- Before: two "2" tiles apart -->
+  <rect x="58" y="137" width="66" height="66" rx="4" fill="#eee4da"/>
+  <text x="91" y="178" text-anchor="middle" font-family="sans-serif" font-size="24" font-weight="bold" fill="#776e65">2</text>
+  <rect x="280" y="137" width="66" height="66" rx="4" fill="#eee4da"/>
+  <text x="313" y="178" text-anchor="middle" font-family="sans-serif" font-size="24" font-weight="bold" fill="#776e65">2</text>
+  <!-- "before" label -->
+  <text x="200" y="390" text-anchor="middle" font-family="sans-serif" font-size="14" fill="#776e65">Same numbers slide into each other</text>
+  <!-- Arrow -->
+  <polygon points="200,405 185,415 215,415" fill="#8f7a66"/>
+  <!-- After: single "4" tile -->
+  <rect x="132" y="425" width="66" height="66" rx="4" fill="#ede0c8"/>
+  <text x="165" y="466" text-anchor="middle" font-family="sans-serif" font-size="24" font-weight="bold" fill="#776e65">4</text>
+  <text x="210" y="458" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#8f7a66">+</text>
+  <text x="210" y="475" text-anchor="middle" font-family="sans-serif" font-size="12" fill="#8f7a66">+</text>
+</svg>

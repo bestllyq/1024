@@ -1,0 +1,46 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500">
+  <rect width="400" height="500" rx="16" fill="#faf8ef"/>
+  <text x="200" y="30" text-anchor="middle" font-family="sans-serif" font-size="20" font-weight="bold" fill="#776e65">Reach 1024 to Win!</text>
+  <!-- Grid background -->
+  <rect x="50" y="55" width="300" height="300" rx="8" fill="#bbada0"/>
+  <!-- Cells -->
+  <rect x="58" y="63" width="66" height="66" rx="4" fill="rgba(238,228,218,0.35)"/>
+  <rect x="132" y="63" width="66" height="66" rx="4" fill="rgba(238,228,218,0.35)"/>
+  <rect x="206" y="63" width="66" height="66" rx="4" fill="rgba(238,228,218,0.35)"/>
+  <rect x="280" y="63" width="66" height="66" rx="4" fill="rgba(238,228,218,0.35)"/>
+  <rect x="58" y="137" width="66" height="66" rx="4" fill="rgba(238,228,218,0.35)"/>
+  <rect x="132" y="137" width="66" height="66" rx="4" fill="rgba(238,228,218,0.35)"/>
+  <rect x="206" y="137" width="66" height="66" rx="4" fill="rgba(238,228,218,0.35)"/>
+  <rect x="280" y="137" width="66" height="66" rx="4" fill="rgba(238,228,218,0.35)"/>
+  <rect x="58" y="211" width="66" height="66" rx="4" fill="rgba(238,228,218,0.35)"/>
+  <rect x="132" y="211" width="66" height="66" rx="4" fill="rgba(238,228,218,0.35)"/>
+  <rect x="206" y="211" width="66" height="66" rx="4" fill="rgba(238,228,218,0.35)"/>
+  <rect x="280" y="211" width="66" height="66" rx="4" fill="rgba(238,228,218,0.35)"/>
+  <rect x="58" y="285" width="66" height="66" rx="4" fill="rgba(238,228,218,0.35)"/>
+  <rect x="132" y="285" width="66" height="66" rx="4" fill="rgba(238,228,218,0.35)"/>
+  <rect x="206" y="285" width="66" height="66" rx="4" fill="rgba(238,228,218,0.35)"/>
+  <rect x="280" y="285" width="66" height="66" rx="4" fill="rgba(238,228,218,0.35)"/>
+  <!-- 1024 tile -->
+  <rect x="132" y="137" width="66" height="66" rx="4" fill="#edc53f"/>
+  <text x="165" y="175" text-anchor="middle" font-family="sans-serif" font-size="18" font-weight="bold" fill="#f9f6f2">1024</text>
+  <!-- Other tiles -->
+  <rect x="58" y="285" width="66" height="66" rx="4" fill="#eee4da"/>
+  <text x="91" y="326" text-anchor="middle" font-family="sans-serif" font-size="24" font-weight="bold" fill="#776e65">2</text>
+  <rect x="280" y="285" width="66" height="66" rx="4" fill="#ede0c8"/>
+  <text x="313" y="326" text-anchor="middle" font-family="sans-serif" font-size="24" font-weight="bold" fill="#776e65">4</text>
+  <rect x="206" y="285" width="66" height="66" rx="4" fill="#f2b179"/>
+  <text x="239" y="326" text-anchor="middle" font-family="sans-serif" font-size="24" font-weight="bold" fill="#f9f6f2">8</text>
+  <rect x="280" y="63" width="66" height="66" rx="4" fill="#f67c5f"/>
+  <text x="313" y="104" text-anchor="middle" font-family="sans-serif" font-size="20" font-weight="bold" fill="#f9f6f2">32</text>
+  <!-- Stars / celebration -->
+  <text x="80" y="125" font-family="sans-serif" font-size="16" fill="#edcf72">&#9733;</text>
+  <text x="300" y="190" font-family="sans-serif" font-size="16" fill="#edcf72">&#9733;</text>
+  <text x="90" y="250" font-family="sans-serif" font-size="14" fill="#edcf72">&#9733;</text>
+  <!-- Description -->
+  <text x="200" y="410" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#776e65">Keep merging until you create</text>
+  <rect x="145" y="425" width="110" height="32" rx="6" fill="#edc53f"/>
+  <text x="200" y="446" text-anchor="middle" font-family="sans-serif" font-size="16" font-weight="bold" fill="#f9f6f2">1024</text>
+  <!-- You Win button -->
+  <rect x="140" y="468" width="120" height="28" rx="6" fill="#8f7a66"/>
+  <text x="200" y="487" text-anchor="middle" font-family="sans-serif" font-size="14" font-weight="bold" fill="#f9f6f2">You Win!</text>
+</svg>

@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" width="400" height="500">
+  <rect width="400" height="500" rx="16" fill="#faf8ef"/>
+  <!-- Title -->
+  <text x="200" y="30" text-anchor="middle" font-family="sans-serif" font-size="20" font-weight="bold" fill="#776e65">Swipe to Move</text>
+  <!-- Grid background -->
+  <rect x="50" y="55" width="300" height="300" rx="8" fill="#bbada0"/>
+  <!-- Cells -->
+  <rect x="58" y="63" width="66" height="66" rx="4" fill="rgba(238,228,218,0.35)"/>
+  <rect x="132" y="63" width="66" height="66" rx="4" fill="rgba(238,228,218,0.35)"/>
+  <rect x="206" y="63" width="66" height="66" rx="4" fill="rgba(238,228,218,0.35)"/>
+  <rect x="280" y="63" width="66" height="66" rx="4" fill="rgba(238,228,218,0.35)"/>
+  <rect x="58" y="137" width="66" height="66" rx="4" fill="rgba(238,228,218,0.35)"/>
+  <rect x="132" y="137" width="66" height="66" rx="4" fill="rgba(238,228,218,0.35)"/>
+  <rect x="206" y="137" width="66" height="66" rx="4" fill="rgba(238,228,218,0.35)"/>
+  <rect x="280" y="137" width="66" height="66" rx="4" fill="rgba(238,228,218,0.35)"/>
+  <rect x="58" y="211" width="66" height="66" rx="4" fill="rgba(238,228,218,0.35)"/>
+  <rect x="132" y="211" width="66" height="66" rx="4" fill="rgba(238,228,218,0.35)"/>
+  <rect x="206" y="211" width="66" height="66" rx="4" fill="rgba(238,228,218,0.35)"/>
+  <rect x="280" y="211" width="66" height="66" rx="4" fill="rgba(238,228,218,0.35)"/>
+  <rect x="58" y="285" width="66" height="66" rx="4" fill="rgba(238,228,218,0.35)"/>
+  <rect x="132" y="285" width="66" height="66" rx="4" fill="rgba(238,228,218,0.35)"/>
+  <rect x="206" y="285" width="66" height="66" rx="4" fill="rgba(238,228,218,0.35)"/>
+  <rect x="280" y="285" width="66" height="66" rx="4" fill="rgba(238,228,218,0.35)"/>
+  <!-- Tile 2 -->
+  <rect x="58" y="137" width="66" height="66" rx="4" fill="#eee4da"/>
+  <text x="91" y="178" text-anchor="middle" font-family="sans-serif" font-size="24" font-weight="bold" fill="#776e65">2</text>
+  <!-- Tile 4 -->
+  <rect x="132" y="137" width="66" height="66" rx="4" fill="#ede0c8"/>
+  <text x="165" y="178" text-anchor="middle" font-family="sans-serif" font-size="24" font-weight="bold" fill="#776e65">4</text>
+  <!-- Arrows -->
+  <polygon points="200,385 180,415 220,415" fill="#8f7a66"/>
+  <polygon points="200,425 180,395 220,395" fill="#8f7a66" transform="rotate(180,200,420)"/>
+  <polygon points="170,405 200,385 230,405" fill="#8f7a66"/>
+  <polygon points="170,405 200,425 230,405" fill="#8f7a66" transform="rotate(90,200,405)"/>
+  <!-- Description -->
+  <text x="200" y="460" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#776e65">Swipe up / down / left / right</text>
+  <text x="200" y="482" text-anchor="middle" font-family="sans-serif" font-size="15" fill="#776e65">to slide all tiles in that direction</text>
+</svg>
