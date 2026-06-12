@@ -93,13 +93,13 @@ function saveScore(s) {
 }
 
 function loadRank() {
-  if (!CLOUD_ENV) { lbError = 'Cloud not ready'; draw(); return; }
+  if (!CLOUD_ENV) { lbError = '云服务未就绪'; draw(); return; }
   lbLoad = true; lbError = ''; draw();
   wx.cloud.callFunction({ name: 'getRank', success: function(r) {
     lbLoad = false;
     if (r.result && r.result.list) { lbData = r.result.list; draw(); }
-    else { lbError = 'No data'; draw(); }
-  }, fail: function() { lbError = 'Load failed'; lbLoad = false; draw(); } });
+    else { lbError = '暂无数据'; draw(); }
+  }, fail: function() { lbError = '加载失败'; lbLoad = false; draw(); } });
 }
 
 // ==================== GAME LOGIC ====================
@@ -214,15 +214,15 @@ function draw() {
   }
 
   // Score boxes
-  var bx=W-P-76,by=P*0.4; sb(bx,by,'SCORE',score); sb(bx-82,by,'BEST',best);
+  var bx=W-P-76,by=P*0.4; sb(bx,by,'分数',score); sb(bx-82,by,'最高',best);
 
   // Hint + New Game button
   var sy = hy + 24;
   ctx.fillStyle='#776e65'; ctx.font=Math.round(W*0.035)+'px sans-serif'; ctx.textAlign='left'; ctx.textBaseline='top';
-  ctx.fillText('Join tiles, get to 1024!',P,sy);
+  ctx.fillText('合并方块，凑出1024！',P,sy);
   ctx.fillStyle='#8f7a66'; fR(W-P-80,sy,80,30);
   ctx.fillStyle='#f9f6f2'; ctx.textAlign='center'; ctx.textBaseline='middle'; ctx.font='bold 14px sans-serif';
-  ctx.fillText('New Game',W-P-40,sy+15);
+  ctx.fillText('新游戏',W-P-40,sy+15);
 
   // Grid bg
   ctx.fillStyle='#bbada0'; fR(P,GY,GW,GW);
@@ -239,7 +239,7 @@ function draw() {
   // Items bar (below grid, above leaderboard)
   var iy = GY + GW + 8;
   var iw = (GW - 12) / 4;
-  var iNames = ['Undo','Shuffle','Bomb','Rank'];
+  var iNames = ['撤回','洗牌','炸','排行'];
   var iCounts = [items.undo, items.shuffle, items.bomb, 0];
   var iActions = ['doUndo','doShuffle','doBomb','doLB'];
   for (var i = 0; i < 4; i++) {
@@ -257,8 +257,8 @@ function draw() {
   }
 
   // Overlays
-  if(won&&!keep) drawOverlay('You Win!',false);
-  else if(over) drawOverlay('Game Over',true);
+  if(won&&!keep) drawOverlay('你赢了！',false);
+  else if(over) drawOverlay('游戏结束',true);
 
   if (noEnergyMsg) {
     var now = Date.now();
@@ -267,9 +267,9 @@ function draw() {
       ctx.fillStyle='rgba(0,0,0,0.5)'; ctx.fillRect(0,0,W,H);
       ctx.fillStyle='#fff'; ctx.textAlign='center'; ctx.textBaseline='middle';
       ctx.font='bold 18px sans-serif';
-      ctx.fillText('No Energy!', W/2, H/2 - 10);
+      ctx.fillText('体力不足！', W/2, H/2 - 10);
       ctx.font='14px sans-serif';
-      ctx.fillText('Wait for energy to recharge', W/2, H/2 + 20);
+      ctx.fillText('等待体力恢复中...', W/2, H/2 + 20);
     }
   }
 
@@ -290,11 +290,11 @@ function drawOverlay(title,isLose) {
     ctx.lineTo(cx-bw/2+6,cy+bh); ctx.quadraticCurveTo(cx-bw/2,cy+bh,cx-bw/2,cy+bh-6);
     ctx.lineTo(cx-bw/2,cy+6); ctx.quadraticCurveTo(cx-bw/2,cy,cx-bw/2+6,cy);
     ctx.closePath(); ctx.stroke();
-    ctx.fillStyle='#776e65'; ctx.font='bold 15px sans-serif'; ctx.fillText('Keep Going',cx,cy+bh/2+1); cy+=bh+gap;
+    ctx.fillStyle='#776e65'; ctx.font='bold 15px sans-serif'; ctx.fillText('继续挑战',cx,cy+bh/2+1); cy+=bh+gap;
   }
   ctx.fillStyle='#8f7a66'; fR(cx-bw/2,cy,bw,bh);
   ctx.fillStyle='#f9f6f2'; ctx.font='bold 15px sans-serif';
-  ctx.fillText(isLose?'Try Again':'New Game',cx,cy+bh/2+1);
+  ctx.fillText(isLose?'再来一局':'新游戏',cx,cy+bh/2+1);
 }
 
 function drawLB() {
@@ -302,12 +302,12 @@ function drawLB() {
   var lx=W*0.08, ly=H*0.08, lw=W*0.84, lh=H*0.84;
   ctx.fillStyle='#fff'; fR(lx,ly,lw,lh);
   ctx.fillStyle='#776e65'; ctx.textAlign='center'; ctx.textBaseline='top';
-  ctx.font='bold 28px sans-serif'; ctx.fillText('Leaderboard',lx+lw/2,ly+20);
-  ctx.font='bold 24px sans-serif'; ctx.fillStyle='#776e65'; ctx.textAlign='right'; ctx.fillText('X',lx+lw-15,ly+10);
+  ctx.font='bold 28px sans-serif'; ctx.fillText('排行榜',lx+lw/2,ly+20);
+  ctx.font='bold 24px sans-serif'; ctx.fillStyle='#776e65'; ctx.textAlign='right'; ctx.fillText('x',lx+lw-15,ly+10);
 
-  if(lbLoad) { ctx.textAlign='center'; ctx.font='16px sans-serif'; ctx.fillStyle='#999'; ctx.fillText('Loading...',lx+lw/2,ly+lh/2); return; }
+  if(lbLoad) { ctx.textAlign='center'; ctx.font='16px sans-serif'; ctx.fillStyle='#999'; ctx.fillText('加载中...',lx+lw/2,ly+lh/2); return; }
   if(lbError) { ctx.textAlign='center'; ctx.font='16px sans-serif'; ctx.fillStyle='#999'; ctx.fillText(lbError,lx+lw/2,ly+lh/2); return; }
-  if(lbData.length===0) { ctx.textAlign='center'; ctx.font='16px sans-serif'; ctx.fillStyle='#999'; ctx.fillText('No scores yet. Play to be #1!',lx+lw/2,ly+lh/2); return; }
+  if(lbData.length===0) { ctx.textAlign='center'; ctx.font='16px sans-serif'; ctx.fillStyle='#999'; ctx.fillText('暂无记录，快来挑战！',lx+lw/2,ly+lh/2); return; }
 
   var startY=ly+70, rowH=Math.min(38,(lh-100)/Math.min(lbData.length,10));
   ctx.font='15px sans-serif';
